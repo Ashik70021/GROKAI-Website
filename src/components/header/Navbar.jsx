@@ -55,7 +55,7 @@ const Navbar = () => {
         </ul>
 
         {/* Buy Now Button (Visible on desktop) */}
-        <button className="hidden md:block bg-gradient-to-r from-white to-gray-100 text-[#161614] px-8 py-3 rounded-full font-bold text-sm hover:scale-105 hover:shadow-lg transition-all duration-300 border border-transparent hover:border-[#00D4FF]/20">
+        <button className="hidden md:block bg-gradient-to-r from-[#00D4FF] to-[#0099CC] text-white px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#00D4FF]/25">
           <span className="flex items-center space-x-2">
             <span>Coming Soon</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +114,7 @@ const Navbar = () => {
           
           <button
             onClick={toggleSidebar}
-            className="bg-gradient-to-r from-white to-gray-100 text-[#161614] px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg mt-8"
+            className="bg-gradient-to-r from-[#00D4FF] to-[#0099CC] text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#00D4FF]/25 mt-8"
           >
             <span className="flex items-center space-x-2">
               <span>Coming Soon</span>
