@@ -24,6 +24,7 @@ const Tokenomics = () => {
     });
 
     const createPieSlice = (percentage, startAngle, color, index) => {
+        // Use consistent radius and center for SVG viewBox
         const radius = 240;
         const centerX = 280;
         const centerY = 280;
@@ -80,51 +81,59 @@ const Tokenomics = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16 items-center">
                     {/* Interactive Pie Chart */}
-                    <div className="flex justify-center">
-                        <div className="relative">
-                            <svg width="560" height="560" className="transform -rotate-90">
-                                {segmentsWithAngles.map((segment, index) => 
-                                    createPieSlice(segment.percentage, segment.startAngle, segment.color, index)
-                                )}
-                            </svg>
-                            
-                            {/* Center Label */}
-                            <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                <span className="text-white text-3xl font-bold">$GROKAI</span>
-                                <span className="text-[#00D4FF] text-xl">1B Total</span>
+                    <div className="flex justify-center items-center order-2 xl:order-1 w-full">
+                        <div className="relative flex justify-center items-center w-full">
+                            <div className="relative mx-auto">
+                                <svg 
+                                    width="280" 
+                                    height="280" 
+                                    viewBox="0 0 560 560" 
+                                    className="transform -rotate-90 w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[560px] lg:h-[560px] mx-auto"
+                                    preserveAspectRatio="xMidYMid meet"
+                                >
+                                    {segmentsWithAngles.map((segment, index) => 
+                                        createPieSlice(segment.percentage, segment.startAngle, segment.color, index)
+                                    )}
+                                </svg>
+                                
+                                {/* Center Label */}
+                                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span className="text-white text-xl sm:text-2xl lg:text-3xl font-bold">$GROKAI</span>
+                                    <span className="text-[#00D4FF] text-sm sm:text-lg lg:text-xl">1B Total</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Token Distribution Details */}
-                    <div className="space-y-4">
+                    <div className="space-y-3 sm:space-y-4 order-1 xl:order-2 xl:pr-12">
                         {tokenData.map((item, index) => (
                             <div
                                 key={index}
-                                className={`bg-[#1C1C1A] border rounded-xl p-4 transition-all duration-300 cursor-pointer ${
+                                className={`bg-[#1C1C1A] border rounded-xl p-4 sm:p-5 transition-all duration-300 cursor-pointer ${
                                     hoveredSegment === index 
-                                        ? 'border-[#00D4FF] shadow-lg shadow-[#00D4FF]/20 transform scale-105' 
+                                        ? 'border-[#00D4FF] shadow-lg shadow-[#00D4FF]/20 transform scale-[1.02] sm:scale-105' 
                                         : 'border-gray-800 hover:border-gray-700'
                                 }`}
                                 onMouseEnter={() => setHoveredSegment(index)}
                                 onMouseLeave={() => setHoveredSegment(null)}
                             >
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center space-x-4">
+                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
+                                    <div className="flex items-start sm:items-center space-x-3 sm:space-x-4 flex-1">
                                         <div 
-                                            className="w-4 h-4 rounded-full"
+                                            className="w-3 h-3 sm:w-4 sm:h-4 rounded-full mt-1 sm:mt-0 flex-shrink-0"
                                             style={{ backgroundColor: item.color }}
                                         ></div>
-                                        <div>
-                                            <h3 className="text-white font-bold text-lg">{item.name}</h3>
-                                            <p className="text-gray-400 text-sm">{item.description}</p>
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="text-white font-bold text-base sm:text-lg leading-tight">{item.name}</h3>
+                                            <p className="text-gray-400 text-xs sm:text-sm mt-1 leading-tight">{item.description}</p>
                                         </div>
                                     </div>
-                                    <div className="text-right">
-                                        <div className="text-[#00D4FF] font-bold text-xl">{item.percentage}%</div>
-                                        <div className="text-gray-400 text-sm">
+                                    <div className="text-left sm:text-right ml-6 sm:ml-0 flex-shrink-0">
+                                        <div className="text-[#00D4FF] font-bold text-lg sm:text-xl">{item.percentage}%</div>
+                                        <div className="text-gray-400 text-xs sm:text-sm">
                                             {(parseInt(totalSupply.replace(/,/g, '')) * item.percentage / 100).toLocaleString()} tokens
                                         </div>
                                     </div>
@@ -135,36 +144,36 @@ const Tokenomics = () => {
                 </div>
 
                 {/* Additional Info */}
-                <div className="mt-16 text-center">
-                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-8 max-w-4xl mx-auto">
-                        <h3 className="text-white text-2xl font-bold mb-6">Token Utility & Features</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="mt-12 sm:mt-16">
+                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 sm:p-8 max-w-4xl mx-auto">
+                        <h3 className="text-white text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Token Utility & Features</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                    <svg className="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                                     </svg>
                                 </div>
-                                <h4 className="text-white font-bold mb-2">Governance</h4>
-                                <p className="text-gray-400 text-sm">Vote on protocol decisions and future developments</p>
+                                <h4 className="text-white font-bold mb-2 text-sm sm:text-base">Governance</h4>
+                                <p className="text-gray-400 text-xs sm:text-sm">Vote on protocol decisions and future developments</p>
                             </div>
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                    <svg className="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
                                 </div>
-                                <h4 className="text-white font-bold mb-2">Staking Rewards</h4>
-                                <p className="text-gray-400 text-sm">Earn rewards by staking GROKAI tokens</p>
+                                <h4 className="text-white font-bold mb-2 text-sm sm:text-base">Staking Rewards</h4>
+                                <p className="text-gray-400 text-xs sm:text-sm">Earn rewards by staking GROKAI tokens</p>
                             </div>
-                            <div className="text-center">
-                                <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                    <svg className="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="text-center sm:col-span-2 lg:col-span-1">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>
-                                <h4 className="text-white font-bold mb-2">AI Access</h4>
-                                <p className="text-gray-400 text-sm">Premium AI features and services access</p>
+                                <h4 className="text-white font-bold mb-2 text-sm sm:text-base">AI Access</h4>
+                                <p className="text-gray-400 text-xs sm:text-sm">Premium AI features and services access</p>
                             </div>
                         </div>
                     </div>
