@@ -9,7 +9,7 @@ const WhitePaper = () => {
                 "Community building across social platforms",
                 "Initial DEX listing"
             ],
-            color: "#00D4FF",
+            color: "#ffffff",
             image: "/Images/grokai1.png"
         },
         {
@@ -20,7 +20,7 @@ const WhitePaper = () => {
                 "Community rewards program activation",
                 "Early partnerships with Web3 projects"
             ],
-            color: "#0099CC",
+            color: "#ffffff",
             image: "/Images/grokai2.png"
         },
         {
@@ -31,7 +31,7 @@ const WhitePaper = () => {
                 "Launch of GROKAI API for developers",
                 "AI + Blockchain integration features"
             ],
-            color: "#006699",
+            color: "#ffffff",
             image: "/Images/increase1.jpg"
         },
         {
@@ -42,7 +42,7 @@ const WhitePaper = () => {
                 "Educational and business AI solutions",
                 "Establishment of DAO for community governance"
             ],
-            color: "#004466",
+            color: "#ffffff",
             image: "/Images/grokai1.png"
         }
     ];
@@ -53,16 +53,13 @@ const WhitePaper = () => {
             <div className="relative bg-gradient-to-r from-[#161614] via-[#1a1a18] to-[#161614] py-20">
                 <div className="max-w-[1800px] mx-auto px-8 text-center">
                     <div className="flex items-center justify-center space-x-4 mb-6">
-                        <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-white rounded-lg flex items-center justify-center">
-                            <span className="text-[#161614] text-xl font-extrabold">G</span>
-                        </div>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white">
                             GROKAI
                         </h1>
                     </div>
                     
                     <div className="mb-8">
-                        <span className="bg-gradient-to-r from-[#00D4FF] to-[#0099CC] bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl font-bold">
+                        <span className="bg-gradient-to-r from-white to-white bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl font-bold">
                             WHITEPAPER
                         </span>
                     </div>
@@ -73,9 +70,9 @@ const WhitePaper = () => {
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute top-10 left-10 w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
+                <div className="absolute top-10 left-10 w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 <div className="absolute bottom-16 right-16 w-3 h-3 bg-white rounded-full animate-ping"></div>
-                <div className="absolute top-1/2 right-10 w-1 h-1 bg-[#00D4FF] rounded-full animate-bounce"></div>
+                <div className="absolute top-1/2 right-10 w-1 h-1 bg-white rounded-full animate-bounce"></div>
             </div>
 
             {/* Roadmap Section */}
@@ -86,22 +83,22 @@ const WhitePaper = () => {
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                             Roadmap
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-[#00D4FF] to-[#0099CC] mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-white to-white mx-auto rounded-full"></div>
                     </div>
 
                     {/* Roadmap Timeline */}
                     <div className="relative">
                         {/* Vertical Line */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-[#00D4FF] to-[#004466] h-full rounded-full hidden lg:block"></div>
+                        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-white to-white h-full rounded-full hidden lg:block"></div>
                         
                         {roadmapData.map((phase, index) => (
                             <div key={index} className={`flex flex-col lg:flex-row items-center mb-16 lg:mb-20 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                                 {/* Content Side */}
                                 <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-8 hover:border-[#00D4FF]/30 transition-all duration-300 group hover:transform hover:scale-105">
+                                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-8 hover:border-white/30 transition-all duration-300 group hover:transform hover:scale-105">
                                         <div className="flex items-center space-x-4 mb-6">
                                             <div 
-                                                className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm"
+                                                className="w-8 h-8 rounded-full flex items-center justify-center text-black font-bold text-sm"
                                                 style={{ backgroundColor: phase.color }}
                                             >
                                                 {index + 1}
@@ -131,7 +128,7 @@ const WhitePaper = () => {
                                 {/* Center Circle (Desktop) */}
                                 <div className="hidden lg:flex w-2/12 justify-center z-10">
                                     <div 
-                                        className="w-12 h-12 rounded-full border-4 border-[#161614] flex items-center justify-center font-bold text-white text-lg shadow-lg"
+                                        className="w-12 h-12 rounded-full border-4 border-[#161614] flex items-center justify-center font-bold text-black text-lg shadow-lg"
                                         style={{ backgroundColor: phase.color }}
                                     >
                                         {index + 1}
@@ -147,7 +144,7 @@ const WhitePaper = () => {
                                                     className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                                                     style={{ backgroundColor: phase.color }}
                                                 >
-                                                    <span className="text-white font-bold text-2xl">{index + 1}</span>
+                                                    <span className="text-black font-bold text-2xl">{index + 1}</span>
                                                 </div>
                                                 <h5 className="text-white font-bold text-lg">{phase.phase}</h5>
                                                 <p className="text-gray-400 text-sm">{phase.title}</p>
@@ -166,7 +163,7 @@ const WhitePaper = () => {
                             <p className="text-gray-300 mb-6">
                                 Be part of the GROKAI ecosystem and help shape the future of AI accessibility.
                             </p>
-                            <button className="bg-gradient-to-r from-[#00D4FF] to-[#0099CC] text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#00D4FF]/25">
+                            <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-gray-300">
                                 <span className="flex items-center space-x-2">
                                     <span>Join GROKAI Community</span>
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

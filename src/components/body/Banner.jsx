@@ -1,8 +1,8 @@
 const Banner = () => {
     return (
-        <div className="relative min-h-screen bg-[#161614] overflow-hidden">
+        <div className="relative h-[65vh] bg-[#161614] overflow-hidden">
             {/* Container */}
-            <div className="w-full mx-auto px-4 sm:px-6 lg:px-32 py-4 flex flex-col lg:flex-row items-center justify-between min-h-screen">
+            <div className="w-full mx-auto px-4 sm:px-6 lg:px-32 py-4 flex flex-col lg:flex-row items-center justify-between h-full">
                 {/* Left Content */}
                 <div className="w-full lg:w-1/2 z-10 text-center lg:text-left">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
@@ -13,10 +13,10 @@ const Banner = () => {
                         GROKAI is an innovative Artificial Intelligence project designed to make advanced technology simple and accessible for everyone.
                     </p>
                     
-                    <button className="bg-gradient-to-r from-[#00D4FF] to-[#0099CC] text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#00D4FF]/25">
+                    <button className="bg-black text-white px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-gray-300">
                         <span className="flex items-center space-x-2">
                             <span>Learn More</span>
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
                         </span>
@@ -24,13 +24,14 @@ const Banner = () => {
                 </div>
 
                 {/* Desktop Logo - Right Side */}
-                <div className="hidden lg:block w-1/2 relative h-screen overflow-hidden">
+                <div className="hidden lg:block w-1/2 relative h-full overflow-hidden">
                     {/* Logo Container */}
                     <div className="absolute inset-0 flex items-center justify-center">
                         <img 
                             src="/Images/grokai1.png" 
                             alt="GROKAI Logo" 
-                            className="w-full h-auto max-w-lg opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+                            className="w-full h-auto max-w-lg opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500 animate-spin"
+                            style={{ animationDuration: '5s' }}
                         />
                     </div>
                 </div>
@@ -42,7 +43,8 @@ const Banner = () => {
                         <img 
                             src="/Images/grokai1.png" 
                             alt="GROKAI Logo" 
-                            className="w-full h-auto max-w-xs opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+                            className="w-full h-auto max-w-xs opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500 animate-spin"
+                            style={{ animationDuration: '10s' }}
                         />
                     </div>
                 </div>
@@ -53,7 +55,7 @@ const Banner = () => {
             
             {/* Subtle Grid Pattern */}
             <div className="absolute inset-0 opacity-5" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, #00D4FF 1px, transparent 0)`,
+                backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
                 backgroundSize: '50px 50px'
             }}></div>
         </div>
