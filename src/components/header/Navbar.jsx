@@ -32,17 +32,22 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="relative group">
+            <NavLink 
+              to="/about" 
+              className="hover:text-[#00D4FF] cursor-pointer transition-all duration-300 flex items-center space-x-1"
+            >
             <span className="hover:text-[#00D4FF] cursor-pointer transition-all duration-300 flex items-center space-x-1">
-              Contract Address
+              About GROKAI
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D4FF] group-hover:w-full transition-all duration-300"></div>
             </span>
-          </li>
-          <li className="relative group">
+            </NavLink>
+          </li> 
+          {/* <li className="relative group">
             <span className="hover:text-[#00D4FF] cursor-pointer transition-all duration-300 flex items-center space-x-1">
               How to Buy
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D4FF] group-hover:w-full transition-all duration-300"></div>
             </span>
-          </li>
+          </li> */}
           <li className="relative group">
             <NavLink 
               to="/whitepaper" 

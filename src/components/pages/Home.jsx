@@ -1,6 +1,7 @@
 import Banner from "../body/Banner";
 import AboutGrok from "../body/AboutGrok";
 import Tokenomics from "../body/Tokenomics";
+import WhySol from "../body/WhySol";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Banner />
             <AboutGrok />
             <Tokenomics />
+            <WhySol></WhySol>
         </div>
     );
 };

@@ -1,11 +1,43 @@
 
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutGrok = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            {
+                threshold: 0.1, // Trigger when 10% of the section is visible
+                rootMargin: '-50px 0px', // Start animation 50px before entering viewport
+            }
+        );
+
+        const currentRef = sectionRef.current;
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef);
+            }
+        };
+    }, []);
+
     return (
-        <div className="bg-[#161614] py-20">
+        <div className="bg-[#161614] py-20" ref={sectionRef}>
             <div className="max-w-[1800px] mx-auto px-8">
                 {/* Header Section */}
-                <div className="text-center mb-16">
+                <div className={`text-center mb-16 transition-all duration-1000 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                         About GROKAI
                     </h2>
@@ -17,7 +49,12 @@ const AboutGrok = () => {
                 {/* Icon Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Analyze Data Card */}
-                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-300 group hover:transform hover:scale-105">
+                    <div className={`bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-500 group hover:transform hover:scale-105 ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
+                    style={{
+                        transitionDelay: isVisible ? '200ms' : '0ms'
+                    }}>
                         <div className="flex flex-col items-center text-center">
                             <div className="w-16 h-16 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-[#00D4FF]/30 group-hover:to-[#0099CC]/30 transition-all duration-300">
                                 <svg className="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,7 +69,12 @@ const AboutGrok = () => {
                     </div>
 
                     {/* Automate Tasks Card */}
-                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-300 group hover:transform hover:scale-105">
+                    <div className={`bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-500 group hover:transform hover:scale-105 ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
+                    style={{
+                        transitionDelay: isVisible ? '400ms' : '0ms'
+                    }}>
                         <div className="flex flex-col items-center text-center">
                             <div className="w-16 h-16 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-[#00D4FF]/30 group-hover:to-[#0099CC]/30 transition-all duration-300">
                                 <svg className="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,7 +90,12 @@ const AboutGrok = () => {
                     </div>
 
                     {/* Enhance Decision-Making Card */}
-                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-300 group hover:transform hover:scale-105">
+                    <div className={`bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-500 group hover:transform hover:scale-105 ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
+                    style={{
+                        transitionDelay: isVisible ? '600ms' : '0ms'
+                    }}>
                         <div className="flex flex-col items-center text-center">
                             <div className="w-16 h-16 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-[#00D4FF]/30 group-hover:to-[#0099CC]/30 transition-all duration-300">
                                 <svg className="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,7 +110,12 @@ const AboutGrok = () => {
                     </div>
 
                     {/* Drive Creativity Card */}
-                    <div className="bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-300 group hover:transform hover:scale-105">
+                    <div className={`bg-[#1C1C1A] border border-gray-800 rounded-xl p-6 hover:border-[#00D4FF]/30 transition-all duration-500 group hover:transform hover:scale-105 ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
+                    style={{
+                        transitionDelay: isVisible ? '800ms' : '0ms'
+                    }}>
                         <div className="flex flex-col items-center text-center">
                             <div className="w-16 h-16 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-[#00D4FF]/30 group-hover:to-[#0099CC]/30 transition-all duration-300">
                                 <svg className="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,6 +129,24 @@ const AboutGrok = () => {
                             </p>
                         </div>
                     </div>
+                </div>
+
+                {/* View Whitepaper Button */}
+                <div className={`text-center mt-16 transition-all duration-1000 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{
+                    transitionDelay: isVisible ? '1000ms' : '0ms'
+                }}>
+                    <Link 
+                        to="/whitepaper"
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#00D4FF] to-[#0099CC] text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#00D4FF]/25"
+                    >
+                        <span>View Whitepaper</span>
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </Link>
                 </div>
             </div>
         </div>
