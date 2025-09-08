@@ -9,8 +9,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#161614] backdrop-blur-md border-b border-gray-800/30 py-4 sticky top-0 z-40">
-      <div className="max-w-[1800px] mx-auto px-8 flex justify-between items-center">
+    <nav className="bg-[#161614] backdrop-blur-md border-b border-gray-800/30 py-4 sticky top-0 z-40 w-full overflow-hidden">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <NavLink to="/" className="text-white font-bold text-xl lg:text-2xl flex items-center space-x-2 hover:scale-105 transition-transform duration-300 group">
           <div className="w-8 h-8 bg-gradient-to-r from-[#00D4FF] to-white rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#00D4FF]/25 transition-all duration-300">

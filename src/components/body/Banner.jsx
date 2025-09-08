@@ -2,7 +2,7 @@ const Banner = () => {
     return (
         <div className="relative min-h-screen bg-[#161614] overflow-hidden">
             {/* Container */}
-            <div className="max-w-[1500px] mx-auto px-8 py-4 flex flex-col lg:flex-row items-center justify-between min-h-screen">
+            <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col lg:flex-row items-center justify-between min-h-screen">
                 {/* Left Content */}
                 <div className="w-full lg:w-1/2 z-10 text-center lg:text-left">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
@@ -24,10 +24,10 @@ const Banner = () => {
                 </div>
 
                 {/* Desktop Animation - Right Side */}
-                <div className="hidden lg:block w-1/2 relative h-screen">
+                <div className="hidden lg:block w-1/2 relative h-screen overflow-hidden">
                     {/* Animated Lines Container */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <svg width="600" height="600" viewBox="0 0 600 600" className="opacity-60">
+                        <svg className="w-full h-full max-w-md max-h-md opacity-60" viewBox="0 0 600 600"  preserveAspectRatio="xMidYMid meet">
                             {/* Central Node */}
                             <circle 
                                 cx="300" 
@@ -157,10 +157,10 @@ const Banner = () => {
                 </div>
 
                 {/* Mobile Animation - Bottom Display */}
-                <div className="block lg:hidden w-full relative h-64 mt-8">
+                <div className="block lg:hidden w-full relative h-64 mt-8 overflow-hidden">
                     {/* Mobile Animated Lines Container */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <svg width="350" height="250" viewBox="0 0 350 250" className="opacity-60">
+                        <svg className="w-full h-full max-w-sm opacity-60" viewBox="0 0 350 250" preserveAspectRatio="xMidYMid meet">
                             {/* Central Node */}
                             <circle 
                                 cx="175" 
