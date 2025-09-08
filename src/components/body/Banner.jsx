@@ -2,7 +2,7 @@ const Banner = () => {
     return (
         <div className="relative min-h-screen bg-[#161614] overflow-hidden">
             {/* Container */}
-            <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col lg:flex-row items-center justify-between min-h-screen">
+            <div className="w-full mx-auto px-4 sm:px-6 lg:px-32 py-4 flex flex-col lg:flex-row items-center justify-between min-h-screen">
                 {/* Left Content */}
                 <div className="w-full lg:w-1/2 z-10 text-center lg:text-left">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
@@ -39,62 +39,62 @@ const Banner = () => {
                             
                             {/* Radiating Lines - Primary Layer */}
                             <g className="animate-spin" style={{transformOrigin: '300px 300px', animationDuration: '20s'}}>
-                                <line x1="300" y1="300" x2="450" y2="200" stroke="#00D4FF" strokeWidth="1" opacity="0.7">
+                                <line x1="300" y1="300" x2="450" y2="200" stroke="#00D4FF" strokeWidth="2.5" opacity="0.7">
                                     <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="500" y2="350" stroke="#00D4FF" strokeWidth="1" opacity="0.5">
+                                <line x1="300" y1="300" x2="500" y2="350" stroke="#00D4FF" strokeWidth="2.5" opacity="0.5">
                                     <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="400" y2="450" stroke="#00D4FF" strokeWidth="1" opacity="0.6">
+                                <line x1="300" y1="300" x2="400" y2="450" stroke="#00D4FF" strokeWidth="2.5" opacity="0.6">
                                     <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="150" y2="400" stroke="#00D4FF" strokeWidth="1" opacity="0.4">
+                                <line x1="300" y1="300" x2="150" y2="400" stroke="#00D4FF" strokeWidth="2.5" opacity="0.4">
                                     <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="100" y2="250" stroke="#00D4FF" strokeWidth="1" opacity="0.7">
+                                <line x1="300" y1="300" x2="100" y2="250" stroke="#00D4FF" strokeWidth="2.5" opacity="0.7">
                                     <animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="200" y2="150" stroke="#00D4FF" strokeWidth="1" opacity="0.5">
+                                <line x1="300" y1="300" x2="200" y2="150" stroke="#00D4FF" strokeWidth="2.5" opacity="0.5">
                                     <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="350" y2="100" stroke="#00D4FF" strokeWidth="1" opacity="0.6">
+                                <line x1="300" y1="300" x2="350" y2="100" stroke="#00D4FF" strokeWidth="2.5" opacity="0.6">
                                     <animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="520" y2="280" stroke="#00D4FF" strokeWidth="1" opacity="0.5">
+                                <line x1="300" y1="300" x2="520" y2="280" stroke="#00D4FF" strokeWidth="2.5" opacity="0.5">
                                     <animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="250" y2="500" stroke="#00D4FF" strokeWidth="1" opacity="0.7">
+                                <line x1="300" y1="300" x2="250" y2="500" stroke="#00D4FF" strokeWidth="2.5" opacity="0.7">
                                     <animate attributeName="opacity" values="0.5;1;0.5" dur="4.2s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="80" y2="350" stroke="#00D4FF" strokeWidth="1" opacity="0.4">
+                                <line x1="300" y1="300" x2="80" y2="350" stroke="#00D4FF" strokeWidth="2.5" opacity="0.4">
                                     <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite" />
                                 </line>
                             </g>
                             
                             {/* Secondary Lines - Counter Rotation */}
                             <g className="animate-spin" style={{transformOrigin: '300px 300px', animationDuration: '15s', animationDirection: 'reverse'}}>
-                                <line x1="300" y1="300" x2="380" y2="180" stroke="#ffffff" strokeWidth="0.5" opacity="0.3">
+                                <line x1="300" y1="300" x2="380" y2="180" stroke="#ffffff" strokeWidth="1.5" opacity="0.3">
                                     <animate attributeName="opacity" values="0.2;0.8;0.2" dur="5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="480" y2="320" stroke="#ffffff" strokeWidth="0.5" opacity="0.4">
+                                <line x1="300" y1="300" x2="480" y2="320" stroke="#ffffff" strokeWidth="1.5" opacity="0.4">
                                     <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.8s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="320" y2="480" stroke="#ffffff" strokeWidth="0.5" opacity="0.3">
+                                <line x1="300" y1="300" x2="320" y2="480" stroke="#ffffff" strokeWidth="1.5" opacity="0.3">
                                     <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.2s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="120" y2="380" stroke="#ffffff" strokeWidth="0.5" opacity="0.4">
+                                <line x1="300" y1="300" x2="120" y2="380" stroke="#ffffff" strokeWidth="1.5" opacity="0.4">
                                     <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3.2s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="420" y2="120" stroke="#ffffff" strokeWidth="0.5" opacity="0.3">
+                                <line x1="300" y1="300" x2="420" y2="120" stroke="#ffffff" strokeWidth="1.5" opacity="0.3">
                                     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4.8s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="180" y2="470" stroke="#ffffff" strokeWidth="0.5" opacity="0.4">
+                                <line x1="300" y1="300" x2="180" y2="470" stroke="#ffffff" strokeWidth="1.5" opacity="0.4">
                                     <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="550" y2="250" stroke="#ffffff" strokeWidth="0.5" opacity="0.3">
+                                <line x1="300" y1="300" x2="550" y2="250" stroke="#ffffff" strokeWidth="1.5" opacity="0.3">
                                     <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="300" y1="300" x2="50" y2="300" stroke="#ffffff" strokeWidth="0.5" opacity="0.4">
+                                <line x1="300" y1="300" x2="50" y2="300" stroke="#ffffff" strokeWidth="1.5" opacity="0.4">
                                     <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite" />
                                 </line>
                             </g>
@@ -172,28 +172,28 @@ const Banner = () => {
                             
                             {/* Primary Mobile Lines */}
                             <g className="animate-spin" style={{transformOrigin: '175px 125px', animationDuration: '20s'}}>
-                                <line x1="175" y1="125" x2="280" y2="80" stroke="#00D4FF" strokeWidth="1" opacity="0.7">
+                                <line x1="175" y1="125" x2="280" y2="80" stroke="#00D4FF" strokeWidth="2" opacity="0.7">
                                     <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="175" y1="125" x2="300" y2="150" stroke="#00D4FF" strokeWidth="1" opacity="0.5">
+                                <line x1="175" y1="125" x2="300" y2="150" stroke="#00D4FF" strokeWidth="2" opacity="0.5">
                                     <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="175" y1="125" x2="250" y2="200" stroke="#00D4FF" strokeWidth="1" opacity="0.6">
+                                <line x1="175" y1="125" x2="250" y2="200" stroke="#00D4FF" strokeWidth="2" opacity="0.6">
                                     <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="175" y1="125" x2="100" y2="180" stroke="#00D4FF" strokeWidth="1" opacity="0.4">
+                                <line x1="175" y1="125" x2="100" y2="180" stroke="#00D4FF" strokeWidth="2" opacity="0.4">
                                     <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="175" y1="125" x2="70" y2="110" stroke="#00D4FF" strokeWidth="1" opacity="0.7">
+                                <line x1="175" y1="125" x2="70" y2="110" stroke="#00D4FF" strokeWidth="2" opacity="0.7">
                                     <animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="175" y1="125" x2="120" y2="60" stroke="#00D4FF" strokeWidth="1" opacity="0.5">
+                                <line x1="175" y1="125" x2="120" y2="60" stroke="#00D4FF" strokeWidth="2" opacity="0.5">
                                     <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="175" y1="125" x2="220" y2="40" stroke="#00D4FF" strokeWidth="1" opacity="0.6">
+                                <line x1="175" y1="125" x2="220" y2="40" stroke="#00D4FF" strokeWidth="2" opacity="0.6">
                                     <animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite" />
                                 </line>
-                                <line x1="175" y1="125" x2="320" y2="120" stroke="#00D4FF" strokeWidth="1" opacity="0.5">
+                                <line x1="175" y1="125" x2="320" y2="120" stroke="#00D4FF" strokeWidth="2" opacity="0.5">
                                     <animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" repeatCount="indefinite" />
                                 </line>
                             </g>
