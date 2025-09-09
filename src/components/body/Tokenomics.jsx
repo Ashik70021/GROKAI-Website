@@ -73,7 +73,7 @@ const Tokenomics = () => {
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                         Tokenomics
                     </h2>
-                    <p className="text-2xl md:text-3xl text-[#00D4FF] font-bold mb-4">
+                    <p className="text-2xl md:text-3xl text-white font-bold mb-4">
                         1B $GROKAI
                     </p>
                     <p className="text-lg text-gray-300">
@@ -114,7 +114,7 @@ const Tokenomics = () => {
                                 key={index}
                                 className={`bg-[#1C1C1A] border rounded-xl p-4 sm:p-5 transition-all duration-300 cursor-pointer ${
                                     hoveredSegment === index 
-                                        ? 'border-[#00D4FF] shadow-lg shadow-[#00D4FF]/20 transform scale-[1.02] sm:scale-105' 
+                                        ? 'border-white shadow-lg shadow-white/20 transform scale-[1.02] sm:scale-105' 
                                         : 'border-gray-800 hover:border-gray-700'
                                 }`}
                                 onMouseEnter={() => setHoveredSegment(index)}
@@ -132,7 +132,7 @@ const Tokenomics = () => {
                                         </div>
                                     </div>
                                     <div className="text-left sm:text-right ml-6 sm:ml-0 flex-shrink-0">
-                                        <div className="text-[#00D4FF] font-bold text-lg sm:text-xl">{item.percentage}%</div>
+                                        <div className="text-white font-bold text-lg sm:text-xl">{item.percentage}%</div>
                                         <div className="text-gray-400 text-xs sm:text-sm">
                                             {(parseInt(totalSupply.replace(/,/g, '')) * item.percentage / 100).toLocaleString()} tokens
                                         </div>
@@ -149,8 +149,8 @@ const Tokenomics = () => {
                         <h3 className="text-white text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Token Utility & Features</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                             <div className="text-center">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-white/20 to-black/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                                     </svg>
                                 </div>
@@ -158,8 +158,8 @@ const Tokenomics = () => {
                                 <p className="text-gray-400 text-xs sm:text-sm">Vote on protocol decisions and future developments</p>
                             </div>
                             <div className="text-center">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-white/20 to-black/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
                                 </div>
@@ -167,8 +167,8 @@ const Tokenomics = () => {
                                 <p className="text-gray-400 text-xs sm:text-sm">Earn rewards by staking GROKAI tokens</p>
                             </div>
                             <div className="text-center sm:col-span-2 lg:col-span-1">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#00D4FF]/20 to-[#0099CC]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-white/20 to-black/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>

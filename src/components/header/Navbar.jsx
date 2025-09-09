@@ -9,26 +9,27 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#161614] py-8 px-32 flex justify-between items-center">
+    <nav className="bg-gradient-to-r from-white via-gray-200 to-black py-8 px-32 flex justify-between items-center">
       {/* Logo */}
-      <div className="text-[white] font-bold text-xl lg:text-2xl flex items-center space-x-3">
+      <NavLink to="/" className="text-[white] font-bold text-xl lg:text-2xl flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300">
         <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center">
           <img src="/Images/grokai1.png" alt="GROKAI" className="w-full h-full object-contain" />
         </div>
-        <span className="text-white">GROKAI</span>
-
-      </div>
+        <span className="text-black">GROKAI</span>
+      </NavLink>
 
       {/* Desktop Navigation Links */}
-      <ul className="hidden md:flex space-x-6 text-white text-lg lg:text-xl font-medium">
+      <ul className="hidden md:flex space-x-12 text-black text-lg lg:text-xl font-medium">
         <li className="hover:text-black cursor-pointer"><NavLink to="/">Home</NavLink></li>
-        <li className="hover:text-black cursor-pointer"><NavLink to="/about">About GROKAI</NavLink></li>
+        <li className="hover:text-black cursor-pointer"><NavLink to="/about">About</NavLink></li>
+        <li className="hover:text-black cursor-pointer"><NavLink to="/about">Token</NavLink></li>
+        <li className="hover:text-black cursor-pointer"><NavLink to="/about">Community</NavLink></li>
         <li className="hover:text-black cursor-pointer"><NavLink to="/whitepaper">Whitepaper</NavLink></li>
       </ul>
 
       {/* Buy Now Button (Visible on desktop) */}
-      <button className="hidden md:block bg-[#ffffff] text-[#161614] px-6 py-2 rounded-md font-bold text-sm hover:scale-105 transition-transform">
-        Coming Soon
+      <button className="hidden md:block bg-[#ffffff] text-[#161614] px-6 py-1 rounded-md font-bold text-lg hover:scale-105 transition-transform">
+        Buy Token
       </button>
 
       {/* Mobile Sidebar Button */}
@@ -52,14 +53,16 @@ const Navbar = () => {
           </button>
           <ul className="space-y-6 text-white text-lg font-medium">
             <li className="hover:text-black cursor-pointer"><NavLink to="/">Home</NavLink></li>
-            <li className="hover:text-black cursor-pointer"><NavLink to="/about">About GROKAI</NavLink></li>
+            <li className="hover:text-black cursor-pointer"><NavLink to="/about">About</NavLink></li>
+            <li className="hover:text-black cursor-pointer"><NavLink to="/about">Token</NavLink></li>
+            <li className="hover:text-black cursor-pointer"><NavLink to="/about">Community</NavLink></li>
             <li className="hover:text-black cursor-pointer"><NavLink to="/whitepaper">Whitepaper</NavLink></li>
           </ul>
           <button
             onClick={toggleSidebar}
-            className="bg-[#ffffff] text-[#161614] px-8 py-3 rounded-md font-bold text-lg hover:scale-105 transition-transform"
+            className="bg-[#ffffff] text-[#161614] px-6 py-2 rounded-md font-bold text-lg hover:scale-105 transition-transform"
           >
-            Coming Soon
+            Buy Token
           </button>
         </div>
       )}

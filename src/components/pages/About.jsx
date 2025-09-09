@@ -212,8 +212,8 @@ const About = () => {
                                     </div>
 
                                     {/* Timeline Node */}
-                                    <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-2">
-                                        <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#0099CC] rounded-full flex items-center justify-center border-4 border-[#161614] shadow-lg">
+                                    <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-2 pb-4">
+                                        <div className="w-12 h-12 bg-gradient-to-r from-[#ffff] to-[#00] rounded-full flex items-center justify-center border-4 border-[#ffff] shadow-lg">
                                             <span className="text-white font-bold text-sm">{goal.number}</span>
                                         </div>
                                     </div>
