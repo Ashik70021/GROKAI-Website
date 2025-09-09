@@ -4,12 +4,12 @@ const Tokenomics = () => {
     const [hoveredSegment, setHoveredSegment] = useState(null);
 
     const tokenData = [
-        { name: 'Community & Ecosystem', percentage: 35, color: '#00D4FF', description: 'Airdrops, rewards, and community initiatives' },
-        { name: 'Liquidity & Exchanges', percentage: 20, color: '#0099CC', description: 'DEX/CEX liquidity and trading pairs' },
-        { name: 'Team & Advisors', percentage: 15, color: '#006699', description: 'Core team allocation with vesting schedule' },
-        { name: 'Development & Partnerships', percentage: 15, color: '#004466', description: 'Technical development and strategic partnerships' },
-        { name: 'Marketing & Growth', percentage: 10, color: '#002233', description: 'Marketing campaigns and user acquisition' },
-        { name: 'Reserve/Treasury', percentage: 5, color: '#001122', description: 'Emergency fund and future opportunities' }
+        { name: 'Community & Ecosystem', percentage: 35, color: '#FFFFFF', description: 'Airdrops, rewards, and community initiatives' },
+        { name: 'Liquidity & Exchanges', percentage: 20, color: '#E5E5E5', description: 'DEX/CEX liquidity and trading pairs' },
+        { name: 'Team & Advisors', percentage: 15, color: '#CCCCCC', description: 'Core team allocation with vesting schedule' },
+        { name: 'Development & Partnerships', percentage: 15, color: '#999999', description: 'Technical development and strategic partnerships' },
+        { name: 'Marketing & Growth', percentage: 10, color: '#666666', description: 'Marketing campaigns and user acquisition' },
+        { name: 'Reserve/Treasury', percentage: 5, color: '#333333', description: 'Emergency fund and future opportunities' }
     ];
 
     const totalSupply = "1,000,000,000";
@@ -46,22 +46,42 @@ const Tokenomics = () => {
             'Z'
         ].join(' ');
 
+        // Calculate position for percentage label
+        const midAngle = (startAngle + (percentage * 3.6) / 2) * Math.PI / 180;
+        const labelRadius = radius * 0.7; // Position label at 70% of radius
+        const labelX = centerX + labelRadius * Math.cos(midAngle);
+        const labelY = centerY + labelRadius * Math.sin(midAngle);
+
         return (
-            <path
-                key={index}
-                d={pathData}
-                fill={color}
-                stroke="#161614"
-                strokeWidth="4"
-                className="transition-all duration-300 cursor-pointer"
-                style={{
-                    filter: hoveredSegment === index ? 'brightness(1.2)' : 'brightness(1)',
-                    transform: hoveredSegment === index ? 'scale(1.05)' : 'scale(1)',
-                    transformOrigin: `${centerX}px ${centerY}px`
-                }}
-                onMouseEnter={() => setHoveredSegment(index)}
-                onMouseLeave={() => setHoveredSegment(null)}
-            />
+            <g key={index}>
+                <path
+                    d={pathData}
+                    fill={color}
+                    stroke="#161614"
+                    strokeWidth="4"
+                    className="transition-all duration-300 cursor-pointer"
+                    style={{
+                        filter: hoveredSegment === index ? 'brightness(1.2)' : 'brightness(1)',
+                        transform: hoveredSegment === index ? 'scale(1.05)' : 'scale(1)',
+                        transformOrigin: `${centerX}px ${centerY}px`
+                    }}
+                    onMouseEnter={() => setHoveredSegment(index)}
+                    onMouseLeave={() => setHoveredSegment(null)}
+                />
+                {percentage >= 10 && ( // Only show percentage for slices 10% or larger
+                    <text
+                        x={labelX}
+                        y={labelY}
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        className="text-xs sm:text-sm font-bold"
+                        fill={color === '#FFFFFF' || color === '#E5E5E5' || color === '#CCCCCC' ? '#000000' : '#FFFFFF'}
+                        transform={`rotate(90 ${labelX} ${labelY})`} // Rotate text back to normal since SVG is rotated
+                    >
+                        {percentage}%
+                    </text>
+                )}
+            </g>
         );
     };
 
@@ -101,7 +121,7 @@ const Tokenomics = () => {
                                 {/* Center Label */}
                                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                                     <span className="text-white text-xl sm:text-2xl lg:text-3xl font-bold">$GROKAI</span>
-                                    <span className="text-[#00D4FF] text-sm sm:text-lg lg:text-xl">1B Total</span>
+                                    <span className="text-black text-sm sm:text-lg lg:text-xl">1B Total</span>
                                 </div>
                             </div>
                         </div>
