@@ -9,7 +9,7 @@ const Tokenomics = () => {
         { name: 'Team & Advisors', percentage: 15, color: '#CCCCCC', description: 'Core team allocation with vesting schedule' },
         { name: 'Development & Partnerships', percentage: 15, color: '#999999', description: 'Technical development and strategic partnerships' },
         { name: 'Marketing & Growth', percentage: 10, color: '#666666', description: 'Marketing campaigns and user acquisition' },
-        { name: 'Reserve/Treasury', percentage: 5, color: '#333333', description: 'Emergency fund and future opportunities' }
+        { name: 'Reserve/Treasury', percentage: 5, color: '#FFFFFF', description: 'Emergency fund and future opportunities' }
     ];
 
     const totalSupply = "1,000,000,000";
@@ -68,7 +68,7 @@ const Tokenomics = () => {
                     onMouseEnter={() => setHoveredSegment(index)}
                     onMouseLeave={() => setHoveredSegment(null)}
                 />
-                {percentage >= 10 && ( // Only show percentage for slices 10% or larger
+                {percentage >= 5 && ( // Show percentage for slices 5% or larger
                     <text
                         x={labelX}
                         y={labelY}
@@ -120,7 +120,7 @@ const Tokenomics = () => {
                                 
                                 {/* Center Label */}
                                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                    <span className="text-white text-xl sm:text-2xl lg:text-3xl font-bold">$GROKAI</span>
+                                    <span className="text-black text-xl sm:text-2xl lg:text-3xl font-bold">$GROKAI</span>
                                     <span className="text-black text-sm sm:text-lg lg:text-xl">1B Total</span>
                                 </div>
                             </div>
