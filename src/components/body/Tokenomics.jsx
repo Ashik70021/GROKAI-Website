@@ -74,7 +74,7 @@ const Tokenomics = () => {
                         y={labelY}
                         textAnchor="middle"
                         dominantBaseline="middle"
-                        className="text-xs sm:text-sm font-bold"
+                        className="text-2xl font-bold"
                         fill={color === '#FFFFFF' || color === '#E5E5E5' || color === '#CCCCCC' ? '#000000' : '#FFFFFF'}
                         transform={`rotate(90 ${labelX} ${labelY})`} // Rotate text back to normal since SVG is rotated
                     >
@@ -110,7 +110,7 @@ const Tokenomics = () => {
                                     width="280" 
                                     height="280" 
                                     viewBox="0 0 560 560" 
-                                    className="transform -rotate-90 w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[560px] lg:h-[560px] mx-auto"
+                                    className="transform -rotate-90 w-[400px] h-[400px] sm:w-[400px] sm:h-[400px] lg:w-[560px] lg:h-[560px] mx-auto"
                                     preserveAspectRatio="xMidYMid meet"
                                 >
                                     {segmentsWithAngles.map((segment, index) => 
